@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NBasicExtensionMethod")]
 [assembly:
     AssemblyDescription(
-        "A deliberately-small collection of useful extension methods.")]
+        "A deliberately-small collection of useful extension methods with an embarrassing lack of test coverage.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Ben Aston")]
 [assembly: AssemblyProduct("NBasicExtensionMethod")]
