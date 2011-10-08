@@ -94,11 +94,6 @@
             return !string.IsNullOrEmpty(target) && EmailAddressExpression.IsMatch(target);
         }
 
-        public static string NullSafe(this string target)
-        {
-            return (target ?? string.Empty).Trim();
-        }
-
         public static string FormatWith(this string target, params object[] args)
         {
             if (string.IsNullOrWhiteSpace(target))
