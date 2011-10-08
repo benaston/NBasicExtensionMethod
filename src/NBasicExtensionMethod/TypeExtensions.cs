@@ -33,10 +33,5 @@
         {
             return func(t).Count() == n;
         }
-
-        public static object GetDefault(this Type type)
-        {
-            return type.IsValueType ? Activator.CreateInstance(type) : null;
-        }
     }
 }
