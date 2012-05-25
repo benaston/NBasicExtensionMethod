@@ -68,10 +68,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BooleanExtensionTests.cs" />
+    <Compile Include="StringExtensionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NBasicExtensionMethod\NBasicExtensionMethod.csproj">
+      <Project>{B9395385-B0F3-4A82-BFFC-27B0AF3978C2}</Project>
+      <Name>NBasicExtensionMethod</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

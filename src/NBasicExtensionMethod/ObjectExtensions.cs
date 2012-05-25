@@ -1,6 +1,7 @@
 ﻿namespace NBasicExtensionMethod
 {
     using System;
+    using System.Reflection;
 
     /// <summary>
     ///   Responsible for providing object extension methods
@@ -97,6 +98,11 @@
         public static bool DoesNot<T>(this T o, Func<T, bool> a) where T : class
         {
             return !a(o);
+        }
+
+        public static bool HasPublicProperty<T>(this T o, string propertyName) where T : class
+        {
+            return o.GetType().GetProperty(propertyName, BindingFlags.Public | BindingFlags.Instance) != null;
         }
     }
 }

@@ -1,11 +1,15 @@
 ﻿namespace NBasicExtensionMethod
 {
     using System;
+    using System.Collections.Generic;
     using System.Configuration;
+    using System.Dynamic;
     using System.Globalization;
+    using System.Reflection;
     using System.Security.Cryptography;
     using System.Text;
     using System.Text.RegularExpressions;
+    using System.Web.Routing;
 
     public static class StringExtensions
     {
@@ -32,12 +36,42 @@
                                                                   };
 
 
+        public static ExpandoObject ToExpando(this object anonymousObject)
+        {
+            IDictionary<string, object> anonymousDictionary = new RouteValueDictionary(anonymousObject);
+            IDictionary<string, object> expando = new ExpandoObject();
+            foreach (var item in anonymousDictionary)
+                expando.Add(item);
+            return (ExpandoObject)expando;
+        }
+
         /// <summary>
         ///   Returns the appsetting corresponding to the string value.
         /// </summary>
-        public static string AppSetting(this string s)
+        public static string AppSetting(this string s, dynamic options = null)
         {
-            return ConfigurationManager.AppSettings[s];
+            var value = ConfigurationManager.AppSettings[s];
+           
+            if (options == null) {
+                return value;
+            }
+
+            if (value == null && ((object)options).HasPublicProperty("exceptionOnNull") && options.exceptionOnNull)
+            {
+                throw new Exception(string.Format("AppSetting '{0}' is null.", s));
+            }
+
+            if (string.IsNullOrEmpty(value) && ((object)options).HasPublicProperty("exceptionOnNullOrEmpty") && options.exceptionOnNullOrEmpty)
+            {
+                throw new Exception(string.Format("AppSetting '{0}' is null or empty.", s));
+            }
+
+            if (string.IsNullOrWhiteSpace(value) && ((object)options).HasPublicProperty("exceptionOnNullOrWhiteSpace") && options.exceptionOnNullOrWhiteSpace)
+            {
+                throw new Exception(string.Format("AppSetting '{0}' is null or whitespace.", s));
+            }
+
+            return value;
         }
 
         /// <summary>

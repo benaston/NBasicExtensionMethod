@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("NBasicExtensionMethod")]
@@ -14,3 +15,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 [assembly: Guid("cf0157b9-ef4b-441c-bff9-2975a20b6a5e")]
 [assembly: AssemblyVersion("1.0.*")]
+[assembly: InternalsVisibleTo("NBasicExtensionMethod.Test.Fast")]
