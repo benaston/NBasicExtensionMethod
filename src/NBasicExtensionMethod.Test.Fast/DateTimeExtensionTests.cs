@@ -69,5 +69,89 @@ namespace NBasicExtensionMethod.Test.Fast
             // Assert
             dtValue.IsInFuture().Should().BeFalse();
         }
+
+        [Test]
+        public void IsInFuture_Should_Return_False_When_Date_Equals_Now()
+        {
+            // Arrange
+            DateTime dtValue = DateTime.Now;
+            // Act
+
+            // Assert
+            dtValue.IsInFuture().Should().BeFalse();
+        }
+
+        [Test]
+        public void IsOlderThan_Should_Return_True_When_DateA_Is_Older_Than_DateB()
+        {
+            // Arrange
+            DateTime dtDateA = new DateTime(2000, 1, 1, 14, 30, 00);
+            DateTime dtDateB = new DateTime(2010, 1, 1, 14, 30, 00);
+            // Act
+
+            // Assert
+            dtDateA.IsOlderThan(dtDateB).Should().BeTrue();
+        }
+
+        [Test]
+        public void IsOlderThan_Should_Return_False_When_DateA_Is_Later_Than_DateB()
+        {
+            // Arrange
+            DateTime dtDateA = new DateTime(2011, 1, 1, 14, 30, 00);
+            DateTime dtDateB = new DateTime(2010, 1, 1, 14, 30, 00);
+            // Act
+
+            // Assert
+            dtDateA.IsOlderThan(dtDateB).Should().BeFalse();
+        }
+
+        [Test]
+        public void IsOlderThan_Should_Return_False_When_DateA_And_DateB_Are_The_Same()
+        {
+            // Arrange
+            DateTime dtDateA = new DateTime(2000, 1, 1, 14, 30, 00);
+            DateTime dtDateB = new DateTime(2000, 1, 1, 14, 30, 00);
+            // Act
+
+            // Assert
+            dtDateA.IsOlderThan(dtDateB).Should().BeFalse();
+        }
+
+        [Test]
+        public void IsLaterThan_Should_Return_True_When_DateA_Is_Later_Than_DateB()
+        {
+            // Arrange
+            DateTime dtDateA = new DateTime(2011, 1, 1, 14, 30, 00);
+            DateTime dtDateB = new DateTime(2010, 1, 1, 14, 30, 00);
+            // Act
+
+            // Assert
+            dtDateA.IsLaterThan(dtDateB).Should().BeTrue();
+        }
+
+        [Test]
+        public void IsLaterThan_Should_Return_False_When_DateA_Is_Sooner_Than_DateB()
+        {
+            // Arrange
+            DateTime dtDateA = new DateTime(2000, 1, 1, 14, 30, 00);
+            DateTime dtDateB = new DateTime(2010, 1, 1, 14, 30, 00);
+            // Act
+
+            // Assert
+            dtDateA.IsLaterThan(dtDateB).Should().BeFalse();
+        }
+
+        [Test]
+        public void IsLaterThan_Should_Return_False_When_DateA_And_DateB_Are_The_Same()
+        {
+            // Arrange
+            DateTime dtDateA = new DateTime(2000, 1, 1, 14, 30, 00);
+            DateTime dtDateB = new DateTime(2000, 1, 1, 14, 30, 00);
+            // Act
+
+            // Assert
+            dtDateA.IsLaterThan(dtDateB).Should().BeFalse();
+        }
+
     }
 }
