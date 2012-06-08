@@ -14,7 +14,7 @@
 
         public static bool IsInFuture(this DateTime source)
         {
-            return DateTime.Compare(source, DateTime.Now) <= 0;
+            return DateTime.Compare(source, DateTime.Now) > 0;
         }
 
         public static bool IsOlderThan(this DateTime t1, DateTime t2)
