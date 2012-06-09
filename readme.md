@@ -3,6 +3,13 @@ NBasicExtensionMethod
 
 A deliberately-small collection of useful extension methods with an embarrassing lack of test coverage.
 
+How to build and/or run the tests:
+--------
+
+1. Run `/build/build.bat`
+1. Type in the desired option
+1. Hit return
+
 License & Copyright
 --------
 
