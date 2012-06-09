@@ -54,5 +54,4 @@ namespace NBasicExtensionMethod
 		}
 	}
 }
-
 // ReSharper restore InconsistentNaming
