@@ -3,6 +3,11 @@ NBasicExtensionMethod
 
 A deliberately-small collection of useful extension methods with an embarrassing lack of test coverage.
 
+License & Copyright
+--------
+
+This software is released under the GNU Lesser GPL. It is Copyright 2012, Ben Aston. I may be contacted at ben@bj.ma.
+
 How to Contribute
 --------
 
