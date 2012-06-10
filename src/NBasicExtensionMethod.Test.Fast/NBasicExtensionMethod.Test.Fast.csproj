@@ -72,6 +72,8 @@
   <ItemGroup>
     <Compile Include="BooleanExtensionTests.cs" />
     <Compile Include="DateTimeExtensionTests.cs" />
+    <Compile Include="IEnumerableExtensionsTests.cs" />
+    <Compile Include="IntegerExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
