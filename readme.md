@@ -23,7 +23,7 @@ Pull requests including bug fixes, new features and improved test coverage are w
 Credits
 --------
 
-The following people have contributed ideas, documentation, or code to sbt:
+The following people have contributed ideas, documentation, or code to NBasicExtensionMethod:
 
  * Ben Aston (ben@bj.ma)
  * Matt Cantillon
