@@ -5,6 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBasicExtensionMethod", "NB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBasicExtensionMethod.Test.Fast", "NBasicExtensionMethod.Test.Fast\NBasicExtensionMethod.Test.Fast.csproj", "{2475C604-1321-4966-9CB7-5DCAC1349E87}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{46B5681F-02A5-4EFD-A196-729E66B99B01}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
