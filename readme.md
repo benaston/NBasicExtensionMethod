@@ -1,7 +1,7 @@
 NBasicExtensionMethod
 ====
 
-A deliberately-small collection of useful extension methods with an embarrassing lack of test coverage.
+A deliberately-small collection of useful extension methods.
 
 How to build and/or run the tests:
 --------
@@ -19,3 +19,11 @@ How to Contribute
 --------
 
 Pull requests including bug fixes, new features and improved test coverage are welcomed. Please do your best, where possible, to follow the style of code found in the existing codebase.
+
+Credits
+--------
+
+The following people have contributed ideas, documentation, or code to sbt:
+
+ * Ben Aston (ben@bj.ma)
+ * Matt Cantillon

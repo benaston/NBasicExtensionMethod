@@ -1,44 +1,57 @@
-﻿using System.Collections.Generic;
-using NUnit.Framework;
-using NBasicExtensionMethod;
-using FluentAssertions;
+﻿// Copyright 2012, Ben Aston (ben@bj.ma).
+// 
+// This file is part of NViewModelFactory.
+// 
+// NViewModelFactory is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// NViewModelFactory is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with NViewModelFactory. If not, see <http://www.gnu.org/licenses/>.
 
 namespace NBasicExtensionMethod.Test.Fast
 {
-    [TestFixture]
-    public class IEnumerableExtensionsTests
-    {
-        [Test]
-        public void IsNotNullOrEmpty_Should_Return_True_When_Passed_A_Non_Empty_List()
-        {
-            // Arrange
-            List<string> Products = new List<string> {"DummyValue"};
-            // Act
+	using System.Collections.Generic;
+	using FluentAssertions;
+	using NUnit.Framework;
 
-            // Assert
-            Products.IsNotNullOrEmpty().Should().BeTrue();
-        }
-        
-        [Test]
-        public void IsNotNullOrEmpty_Should_Return_False_When_Passed_An_Empty_List()
-        {
-            // Arrange
-            List<string> Products = new List<string>();
-            // Act
+	[TestFixture]
+	public class IEnumerableExtensionsTests
+	{
+		[Test]
+		public void IsNotNullOrEmpty_Should_Return_True_When_Passed_A_Non_Empty_List() {
+			// Arrange
+			var Products = new List<string> {"DummyValue"};
+			// Act
 
-            // Assert
-            Products.IsNotNullOrEmpty().Should().BeFalse();
-        }
+			// Assert
+			Products.IsNotNullOrEmpty().Should().BeTrue();
+		}
 
-        [Test]
-        public void IsNotNullOrEmpty_Should_Return_False_When_Passed_A_Null_List()
-        {
-            // Arrange
-            List<string> Products = null;
-            // Act
+		[Test]
+		public void IsNotNullOrEmpty_Should_Return_False_When_Passed_An_Empty_List() {
+			// Arrange
+			var Products = new List<string>();
+			// Act
 
-            // Assert
-            Products.IsNotNullOrEmpty().Should().BeFalse();
-        }
-    }
+			// Assert
+			Products.IsNotNullOrEmpty().Should().BeFalse();
+		}
+
+		[Test]
+		public void IsNotNullOrEmpty_Should_Return_False_When_Passed_A_Null_List() {
+			// Arrange
+			List<string> Products = null;
+			// Act
+
+			// Assert
+			Products.IsNotNullOrEmpty().Should().BeFalse();
+		}
+	}
 }
